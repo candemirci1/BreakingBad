@@ -9,7 +9,7 @@ import com.example.breakingbad.domain.model.Character
 
 class CharacterAdapter(
     private val characters: List<Character>,
-
+    private val onClick: (String) -> Unit
 ): RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {
 
     class CharacterViewHolder (val binding: ItemCharacterBinding) : RecyclerView.ViewHolder(binding.root)
@@ -29,6 +29,11 @@ class CharacterAdapter(
             Glide.with(root.context)
                 .load(currentCharacter.img)
                 .into(ivCharacter)
+
+            root.setOnClickListener {
+                onClick.invoke(currentCharacter.name)
+
+            }
 
         }
     }

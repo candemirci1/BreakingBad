@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/can/AndroidStudioProjects/BreakingBad/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/can/AndroidStudioProjects/BreakingBad/app/src/main/res/layout/fragment_character_list.xml" value="0.35" />
+        <entry key="..\:/Users/can/AndroidStudioProjects/BreakingBad/app/src/main/res/layout/fragment_quote.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/can/AndroidStudioProjects/BreakingBad/app/src/main/res/layout/item_character.xml" value="0.25" />
         <entry key="..\:/Users/can/AndroidStudioProjects/BreakingBad/app/src/main/res/layout/item_characters.xml" value="0.35" />
+        <entry key="..\:/Users/can/AndroidStudioProjects/BreakingBad/app/src/main/res/layout/item_quote.xml" value="0.1" />
       </map>
     </option>
   </component>

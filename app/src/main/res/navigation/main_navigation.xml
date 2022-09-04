@@ -7,5 +7,17 @@
     <fragment
         android:id="@+id/characterListFragment"
         android:name="com.example.breakingbad.ui.home.CharacterListFragment"
-        android:label="CharacterListFragment" />
+        android:label="CharacterListFragment" >
+        <action
+            android:id="@+id/action_characterListFragment_to_quoteFragment"
+            app:destination="@id/quoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quoteFragment"
+        android:name="com.example.breakingbad.ui.quote.QuoteFragment"
+        android:label="QuoteFragment" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
 </navigation>
