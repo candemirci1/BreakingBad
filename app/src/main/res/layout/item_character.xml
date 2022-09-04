@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    >
+
+
+    <ImageView
+        android:id="@+id/iv_character"
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@tools:sample/avatars[2]" />
+
+    <TextView
+        android:id="@+id/tv_character_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#AA000000"
+        android:maxLines="1"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_character"
+        tools:text="Walter White" />
+
+    <TextView
+        android:id="@+id/tv_character_nickname"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#AA000000"
+        android:maxLines="1"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tv_character_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_character"
+        tools:text="Heisenberg" />
+
+    <TextView
+        android:id="@+id/tv_character_occupation"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#AA000000"
+        android:maxLines="1"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_character_nickname"
+        app:layout_constraintStart_toEndOf="@+id/iv_character"
+        tools:text="Teacher" />
+
+    <TextView
+        android:id="@+id/tv_character_real_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#AA000000"
+        android:maxLines="1"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tv_character_occupation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_character"
+        tools:text="Walter White" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
