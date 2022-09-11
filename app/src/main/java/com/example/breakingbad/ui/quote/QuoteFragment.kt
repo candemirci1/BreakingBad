@@ -9,6 +9,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.breakingbad.databinding.FragmentQuoteBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,14 +44,22 @@ class QuoteFragment: Fragment() {
                     is QuotesViewState.Success -> {
                         binding?.loading?.isVisible = false
                         it.data?.let { quotes ->
-                            adapter = QuoteAdapter(quotes)
-                            binding?.rvQuote?.adapter = adapter
+                            if (quotes.isNotEmpty()) {
+                                adapter = QuoteAdapter(quotes)
+                                binding?.rvQuote?.adapter = adapter
+                            } else {
+                                Toast.makeText(requireContext(),"No Quote Found!!!",Toast.LENGTH_SHORT)
+                                    .show()
+                                findNavController().popBackStack()
+                            }
+
                         }
                     }
 
                     is QuotesViewState.Error -> {
                         binding?.loading?.isVisible = false
                         Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                        findNavController().popBackStack()
                     }
 
                     is QuotesViewState.Loading -> {
